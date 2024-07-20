@@ -1,2 +1,4 @@
-package src;public class EmployeeRecord {
+package src;
+
+public record EmployeeRecord(int id, String name) {
 }
