@@ -1,5 +1,9 @@
 package src;
 
+import src.oops.SOLID.SRP.Book;
+import src.oops.SOLID.SRP.Customer;
+import src.oops.SOLID.SRP.expectation.InvoicePrinter;
+import src.oops.SOLID.SRP.expectation.Library;
 import src.oops.inheritance.Animal;
 import src.oops.inheritance.Cat;
 import src.oops.inheritance.Dog;
@@ -13,6 +17,7 @@ public class Main {
         testEnum();
         testInhertitance();
         testLooseCouplingWithInterface();
+        testSRP();
     }
 
     public static void testRecord(){
@@ -41,5 +46,14 @@ public class Main {
     public static void testLooseCouplingWithInterface(){
         ShoppingCart cart = new ShoppingCart(new UPIProcessor());
         cart.processPayment();
+    }
+
+    public static void testSRP(){
+        Library library = new Library();
+        Customer customer = new Customer("Musk");
+        Book book1 = new Book(1, "Sapiens", "XYZ");
+        library.addBook(book1);
+        InvoicePrinter printer = new InvoicePrinter();
+        printer.printInvoice(book1, customer);
     }
 }
