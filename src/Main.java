@@ -3,6 +3,8 @@ package src;
 import src.oops.inheritance.Animal;
 import src.oops.inheritance.Cat;
 import src.oops.inheritance.Dog;
+import src.oops.loosecoupling.ShoppingCart;
+import src.oops.loosecoupling.UPIProcessor;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +12,7 @@ public class Main {
         testRecord();
         testEnum();
         testInhertitance();
+        testLooseCouplingWithInterface();
     }
 
     public static void testRecord(){
@@ -33,5 +36,10 @@ public class Main {
         dog.makeSound();
         Animal cat = new Cat();
         cat.makeSound();
+    }
+
+    public static void testLooseCouplingWithInterface(){
+        ShoppingCart cart = new ShoppingCart(new UPIProcessor());
+        cart.processPayment();
     }
 }
