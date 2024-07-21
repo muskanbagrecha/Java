@@ -1,5 +1,9 @@
 package src;
 
+import src.oops.SOLID.OCP.expectation.Circle;
+import src.oops.SOLID.OCP.expectation.Shape;
+import src.oops.SOLID.OCP.expectation.Square;
+import src.oops.SOLID.OCP.expectation.TotalArea;
 import src.oops.SOLID.SRP.Book;
 import src.oops.SOLID.SRP.Customer;
 import src.oops.SOLID.SRP.expectation.InvoicePrinter;
@@ -10,6 +14,8 @@ import src.oops.inheritance.Dog;
 import src.oops.loosecoupling.ShoppingCart;
 import src.oops.loosecoupling.UPIProcessor;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -18,6 +24,7 @@ public class Main {
         testInhertitance();
         testLooseCouplingWithInterface();
         testSRP();
+        testOCP();
     }
 
     public static void testRecord(){
@@ -55,5 +62,12 @@ public class Main {
         library.addBook(book1);
         InvoicePrinter printer = new InvoicePrinter();
         printer.printInvoice(book1, customer);
+    }
+
+    public static void testOCP(){
+        Shape square = new Square(5);
+        Shape circle = new Circle(4.5f);
+        double totalArea = TotalArea.calculateTotalArea(Arrays.asList(square, circle));
+        System.out.println("Total area: " + totalArea);
     }
 }
