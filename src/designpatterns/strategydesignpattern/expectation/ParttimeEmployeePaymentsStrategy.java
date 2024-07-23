@@ -1,10 +1,10 @@
 package src.designpatterns.strategydesignpattern.expectation;
 
-public class ParttimeEmployeePayments implements EmployeePayments{
+public class ParttimeEmployeePaymentsStrategy implements EmployeePaymentsStrategy {
     private double rate;
     private int hours;
 
-    public ParttimeEmployeePayments(double rate, int hours) {
+    public ParttimeEmployeePaymentsStrategy(double rate, int hours) {
         this.rate = rate;
         this.hours = hours;
     }

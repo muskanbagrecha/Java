@@ -1,10 +1,10 @@
 package src.designpatterns.strategydesignpattern.expectation;
 
-public class FulltimeEmployeePayments implements EmployeePayments{
+public class FulltimeEmployeePaymentsStrategy implements EmployeePaymentsStrategy {
 
     private double salary;
 
-    public FulltimeEmployeePayments(double salary) {
+    public FulltimeEmployeePaymentsStrategy(double salary) {
         this.salary = salary;
     }
 

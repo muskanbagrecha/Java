@@ -1,5 +1,7 @@
 package src;
 
+import src.designpatterns.strategydesignpattern.expectation.Employee;
+import src.designpatterns.strategydesignpattern.expectation.FulltimeEmployeePaymentsStrategy;
 import src.oops.SOLID.OCP.expectation.Circle;
 import src.oops.SOLID.OCP.expectation.Shape;
 import src.oops.SOLID.OCP.expectation.Square;
@@ -25,6 +27,7 @@ public class Main {
         testLooseCouplingWithInterface();
         testSRP();
         testOCP();
+        testStrategyPattern();
     }
 
     public static void testRecord(){
@@ -69,5 +72,10 @@ public class Main {
         Shape circle = new Circle(4.5f);
         double totalArea = TotalArea.calculateTotalArea(Arrays.asList(square, circle));
         System.out.println("Total area: " + totalArea);
+    }
+
+    public static void testStrategyPattern(){
+        Employee employee = new Employee("Muskan", new FulltimeEmployeePaymentsStrategy(10000));
+        employee.payEmployee();
     }
 }

@@ -1,6 +1,6 @@
 package src.designpatterns.strategydesignpattern.expectation;
 
-public interface EmployeePayments {
+public interface EmployeePaymentsStrategy {
     double calculatePayment();
     void processPayments();
 }
