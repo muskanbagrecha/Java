@@ -1,5 +1,6 @@
 package src;
 
+import src.designpatterns.observable.ObservableDriver;
 import src.designpatterns.strategydesignpattern.expectation.Employee;
 import src.designpatterns.strategydesignpattern.expectation.FulltimeEmployeePaymentsStrategy;
 import src.oops.SOLID.OCP.expectation.Circle;
@@ -28,6 +29,7 @@ public class Main {
         testSRP();
         testOCP();
         testStrategyPattern();
+        ObservableDriver.iphoneObservable();
     }
 
     public static void testRecord(){
