@@ -1,6 +1,6 @@
 package src.designpatterns.decorator.logger;
 
-public class TransactionServiceDecorator implements TransactionService{
+public abstract class TransactionServiceDecorator implements TransactionService{
 
     protected TransactionService decoratedTransactionService;
 
