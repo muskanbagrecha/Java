@@ -1,6 +1,6 @@
-package src.designpatterns.decorator;
+package src.designpatterns.decorator.coffee;
 
-public class CoffeeDecorator implements Coffee {
+public abstract class CoffeeDecorator implements Coffee {
     protected Coffee decoratedCoffee;
 
     public CoffeeDecorator(Coffee decoratedCoffee) {

@@ -1,4 +1,4 @@
-package src.designpatterns.decorator;
+package src.designpatterns.decorator.coffee;
 
 public class SugarDecorator extends CoffeeDecorator {
     public SugarDecorator(Coffee decoratedCoffee) {
@@ -12,6 +12,6 @@ public class SugarDecorator extends CoffeeDecorator {
 
     @Override
     public double getCoffeeCost() {
-        return 0;
+        return decoratedCoffee.getCoffeeCost() + 2;
     }
 }

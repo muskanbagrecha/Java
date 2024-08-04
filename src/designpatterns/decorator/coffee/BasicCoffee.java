@@ -1,6 +1,6 @@
-package src.designpatterns.decorator;
+package src.designpatterns.decorator.coffee;
 
-public class BasicCoffee implements Coffee{
+public class BasicCoffee implements Coffee {
     @Override
     public String getCoffeeInfo() {
         return "Coffee";

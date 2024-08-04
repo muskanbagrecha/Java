@@ -1,4 +1,4 @@
-package src.designpatterns.decorator;
+package src.designpatterns.decorator.coffee;
 
 public interface Coffee {
     String getCoffeeInfo();

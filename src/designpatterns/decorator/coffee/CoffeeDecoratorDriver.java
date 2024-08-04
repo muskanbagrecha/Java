@@ -1,4 +1,4 @@
-package src.designpatterns.decorator;
+package src.designpatterns.decorator.coffee;
 
 public class CoffeeDecoratorDriver {
     public static void main(String[] args) {
