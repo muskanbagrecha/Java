@@ -19,17 +19,20 @@ import src.oops.loosecoupling.UPIProcessor;
 
 import java.util.Arrays;
 
+import static src.designpatterns.observable.weathermonitoring.WeatherAppDriver.weatherAppDriver;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-        testRecord();
-        testEnum();
-        testInhertitance();
-        testLooseCouplingWithInterface();
-        testSRP();
-        testOCP();
-        testStrategyPattern();
-        ObservableDriver.iphoneObservable();
+//        testRecord();
+//        testEnum();
+//        testInhertitance();
+//        testLooseCouplingWithInterface();
+//        testSRP();
+//        testOCP();
+//        testStrategyPattern();
+//        ObservableDriver.iphoneObservable();
+        weatherAppDriver();
     }
 
     public static void testRecord(){
