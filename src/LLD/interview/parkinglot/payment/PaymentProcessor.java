@@ -1,4 +1,5 @@
 package src.LLD.interview.parkinglot.payment;
 
-public class PaymentProcessor {
+public interface PaymentProcessor {
+    boolean makePayment(double amt);
 }
