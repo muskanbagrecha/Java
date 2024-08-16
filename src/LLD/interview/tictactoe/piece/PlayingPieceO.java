@@ -1,13 +1,7 @@
 package src.LLD.interview.tictactoe.piece;
 
-public class PlayingPieceO implements PlayingPiece {
-    private final PlayingPieceType piece;
+public class PlayingPieceO extends PlayingPiece {
     public PlayingPieceO(){
-        this.piece = PlayingPieceType.O;
-    }
-
-    @Override
-    public PlayingPieceType getPieceType(){
-        return this.piece;
+        super(PlayingPieceType.O);
     }
 }
