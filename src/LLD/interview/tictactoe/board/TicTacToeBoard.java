@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.Map;
 
 public class TicTacToeBoard {
-
     private int dimensions;
+
     private static char[][] board;
 
     public TicTacToeBoard(int dimensions, Map<PlayingPieceType, Player> playerMap){
@@ -16,10 +16,14 @@ public class TicTacToeBoard {
         board = new char[dimensions][dimensions];
     }
 
+    public int getDimensions() {
+        return dimensions;
+    }
+
     public void makeMove(int x, int y, PlayingPieceType playingPiece){
         //make move here.
         if(board[x][y]!='\u0000'){
-            throw new RuntimeException("Move not allowed.");
+            throw new IllegalArgumentException("Cell is already occupied");
         }
         board[x][y] = mapPlayingPieceToSymbol(playingPiece);
     }
@@ -37,6 +41,26 @@ public class TicTacToeBoard {
             case STAR: return '*';
             default: return '\u0000';
         }
+    }
+
+    public boolean checkWin(int row, int col, PlayingPieceType playingPiece){
+        char symbol = mapPlayingPieceToSymbol(playingPiece);
+        boolean winRow = true, winCol = true, winDiagonal = true, winReverseDiagonal = true;
+        for(int i = 0; i<dimensions; i++){
+            if(board[row][i]!=symbol){
+                winRow = false;
+            }
+            if(board[i][col]!=symbol){
+                winCol = false;
+            }
+            if(board[i][i]!=symbol){
+                winDiagonal = false;
+            }
+            if(board[i][dimensions-i-1]!=symbol){
+                winReverseDiagonal = false;
+            }
+        }
+        return winRow || winCol || winDiagonal || winReverseDiagonal;
     }
 
     private boolean checkRow(int row, char symbol){

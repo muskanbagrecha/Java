@@ -32,9 +32,12 @@ public class TicTacToeGame {
             int[] spot = getInput(currentPlayer);
             int row = spot[0];
             int col = spot[1];
+            if(row<=0 || col<=0 || row>ticTacToeBoard.getDimensions() || col>ticTacToeBoard.getDimensions()){
+                throw new IllegalArgumentException("Invalid move");
+            }
             ticTacToeBoard.makeMove(row, col, currentPlayer.getPlayingPiece());
             ticTacToeBoard.printboard();
-            if(ticTacToeBoard.isWin(row, col, currentPlayer.getPlayingPiece())){
+            if(ticTacToeBoard.checkWin(row, col, currentPlayer.getPlayingPiece())){
                 return currentPlayer.getName() + " has won";
             }
             players.addLast(currentPlayer);
