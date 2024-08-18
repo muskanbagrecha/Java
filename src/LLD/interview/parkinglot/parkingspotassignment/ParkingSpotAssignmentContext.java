@@ -3,17 +3,17 @@ package src.LLD.interview.parkinglot.parkingspotassignment;
 import src.LLD.interview.parkinglot.terminal.EntryTerminal;
 
 public class ParkingSpotAssignmentContext {
-    private EntryTerminal entryTerminal = null;
+    private int entryTerminalID;
 
     public ParkingSpotAssignmentContext(){
-
+        entryTerminalID = -1;
     }
 
-    public ParkingSpotAssignmentContext(EntryTerminal entryTerminal){
-        this.entryTerminal = entryTerminal;
+    public ParkingSpotAssignmentContext(int entryTerminalID){
+        this.entryTerminalID = entryTerminalID;
     }
 
-    public EntryTerminal getEntryTerminal() {
-        return entryTerminal;
+    public int getEntryTerminalID() {
+        return entryTerminalID;
     }
 }

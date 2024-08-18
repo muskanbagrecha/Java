@@ -21,7 +21,7 @@ public class TicTacToeGame {
     }
 
     public void startGame(){
-        System.out.println("Starting TICTACTOE game!!");
+        System.out.println("Starting TIC TAC TOE game!!");
         String result = playGame();
         System.out.println(result);
     }

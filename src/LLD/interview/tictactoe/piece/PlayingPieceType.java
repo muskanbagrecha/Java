@@ -24,4 +24,3 @@ public enum PlayingPieceType {
         return null;
     }
 }
-
