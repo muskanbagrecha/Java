@@ -39,8 +39,7 @@ public class Question extends Post {
     }
 
     public boolean hasTag(String searchTag){
-        Set<String> allTags = this.tags.stream().map(Tag::getText).collect(Collectors.toSet());
-        return allTags.contains(searchTag);
+        return this.tags.stream().anyMatch(tag -> searchTag.equalsIgnoreCase(tag.getText()));
     }
 
     public void addAnswer(Answer answer){
