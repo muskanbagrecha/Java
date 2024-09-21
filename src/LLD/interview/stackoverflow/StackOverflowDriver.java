@@ -26,10 +26,12 @@ public class StackOverflowDriver {
         Answer a2 = stackOverflow.addAnswer("q1", new Answer("a2", "Umm that does not look right", john));
         stackOverflow.acceptAnswer("q1", "a1");
         stackOverflow.upvote(a1, muskan);
-        List<Question> questions = stackOverflow.search("JAVA");
+        List<Question> questions = stackOverflow.search("Java");
         for(Question question : questions){
             System.out.println(question.getTitle() + "\n" + question.getContent());
         }
         stackOverflow.addComment(a2, new Comment("c1", "What do you mean?", muskan));
+        int[] arr = {1,2,3};
+
     }
 }
